@@ -1,18 +1,16 @@
 [package]
-name = "tracing-bunyan-formatter-with-utc-offset"
+name = "tracing-json-formatter"
 version = "0.3.6"
-authors = ["Luca Palmieri <rust@lpalmieri.com>", "Théo Posty <theo@posty.fr>"]
-edition = "2018"
+authors = ["Théo Posty <theo@posty.fr>"]
+edition = "2021"
 
-license = "MIT/Apache-2.0"
-
-repository = "https://github.com/theo-coder/tracing-bunyan-formatter"
-documentation = "https://docs.rs/tracing-bunyan-formatter/"
+repository = "https://github.com/theo-coder/tracing-json-formatter"
+documentation = "https://docs.rs/tracing-json-formatter/"
 readme = "README.md"
 
-description = "A Bunyan formatter for the tracing crate"
+description = "A Json formatter for the tracing crate"
 
-keywords = ["logging", "metrics", "tracing", "bunyan", "subscriber"]
+keywords = ["logging", "metrics", "tracing", "json", "subscriber"]
 categories = ["development-tools::profiling", "development-tools::debugging"]
 
 [lib]
@@ -29,13 +27,14 @@ tracing-log = { version = "0.1" }
 log = "0.4.8"
 serde_json = { version = "1.0.52" }
 serde = "1.0.106"
-gethostname = "0.2.1"
+gethostname = "0.4.3"
 tracing-core = "0.1.10"
 time = { version = "0.3", default-features = false, features = ["formatting"] }
 ahash = "0.8.2"
+chrono = "0.4.24"
 
 [dev-dependencies]
-claims = "0.6.0"
+claims = "0.7.1"
 lazy_static = "1.4.0"
 tracing = { version = "0.1.13", default-features = false, features = ["log", "std", "attributes"] }
 time = { version = "0.3", default-features = false, features = ["formatting", "parsing", "local-offset"] }
